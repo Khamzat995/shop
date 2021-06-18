@@ -41,6 +41,6 @@ module.exports = {
   getAllCategories,
   postCategories,
   patchCategories,
-  deleteCategories
+  deleteCategories,
 };
 
