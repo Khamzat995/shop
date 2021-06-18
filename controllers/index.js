@@ -18,12 +18,9 @@ const {
   patchProduct,
   deleteProduct,
 } = require("./product");
-const {
-  getAllUser,
-  postUser,
-  patchUser,
-  deleteUser,
-} = require('./user')
+const { getAllUser, postUser, patchUser, deleteUser } = require("./user");
+const { addProductInCart, deleteProductInCart, addCart } = require("./cart");
+const { getReviews, postReview, deleteReview } = require("./review");
 
 module.exports = {
   getAllCategories,
@@ -44,4 +41,10 @@ module.exports = {
   postUser,
   patchUser,
   deleteUser,
+  addProductInCart,
+  deleteProductInCart,
+  addCart,
+  getReviews,
+  postReview,
+  deleteReview,
 };

@@ -19,4 +19,4 @@ app.use(require("./routes/index"));
 
 app.listen(3010, () => {
   console.log("Успешное подключение к локальному серверу");
-});
+})

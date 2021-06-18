@@ -5,8 +5,8 @@ const brandSchema = mongoose.Schema({
     required: true,
   },
   dateFoundation: {
-    type: String,
-    required: true
+    type: Date,
+    default: Date.now
   }
 });
 module.exports = mongoose.model("Brand", brandSchema);

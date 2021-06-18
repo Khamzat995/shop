@@ -6,8 +6,7 @@ const getAllBrands = async (req, res) => {
 const postBrand = async (req, res) => {
   try {
     const brand = await new Brand({
-      name: req.params.name,
-      dateFoundation: req.params.dateFoundation,
+      name: req.body.name
     });
     await brand.save();
     res.json("Бренд успешно добавлен");

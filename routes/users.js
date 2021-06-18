@@ -9,7 +9,7 @@ const {
 } = require("../controllers/index");
 
 router.get("/users", getAllUser);
-router.post("users", postUser);
+router.post("/users", postUser);
 router.patch("/users/:id", patchUser);
 router.delete("/users/:id", deleteUser);
 
