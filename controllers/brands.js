@@ -3,6 +3,7 @@ const getAllBrands = async (req, res) => {
   const getBrands = await Brand.find();
   res.json(getBrands);
 };
+
 const postBrand = async (req, res) => {
   try {
     const brand = await new Brand({
@@ -16,15 +17,17 @@ const postBrand = async (req, res) => {
 };
 const patchBrand = async (req, res) => {
   try {
-    const brand = await new Brand.findOneAndUpdate(req.params.id, {
-      $set: req.body,
-    });
-    brand.save();
+    const brand = await Brand.findOneAndUpdate(
+      { _id: req.params.id }, // поиск элемента по ID
+      { ...req.body } // меняет в теле только то, что пришло
+    );
+    await brand.save();
     res.json("Бренд успешно изменен");
   } catch (e) {
     console.log(e.message);
   }
 };
+
 const deleteBrand = async (req, res) => {
   try {
     const deletedBrand = await Brand.findById(req.params.id);

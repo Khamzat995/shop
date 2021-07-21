@@ -5,17 +5,14 @@ const productSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-
   price: {
     type: Number,
     required: true
   },
-
   availability: {
     type: Boolean,
     required: true
   },
-
   categoryId: {
     ref: 'Category',
     type: mongoose.Schema.Types.ObjectId
@@ -24,7 +21,6 @@ const productSchema = new mongoose.Schema({
     ref: 'Brand',
     type: mongoose.Schema.Types.ObjectId
   },
-
-
 });
+
 module.exports = mongoose.model("Product", productSchema);
